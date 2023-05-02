@@ -1,0 +1,115 @@
+
+
+table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    color: aliceblue;
+
+    tr {
+        cursor: pointer;
+        width: 400px;
+        text-align: center;
+        border-collapse: collapse;
+        border-radius: 10px;
+        animation-duration: 4s;
+        
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+        animation-name: getOut;
+        &:hover {
+            background-color: rgb(116, 114, 114);
+            animation: 4s zoomIn ease-in-out;
+           
+        }
+        @media (max-width:400px) {
+            width: 260px;
+        }
+    }
+
+    td {
+        border: 1px black solid;
+        cursor: pointer;
+        width: 350px;
+        height: 36px;
+        border-collapse: collapse; 
+        
+        &:hover{
+            animation: 3s getOut ease-in-out;
+        }
+        
+        @media (max-width:400px) {
+            width: 260px;
+        }
+    }
+
+    .personId {
+        width: 50px;
+        font-size: 18px;
+    }
+
+    .names{
+        font-size: 20px;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(203, 203, 204);
+    font-size: 15px;
+}
+
+@keyframes zoomIn {
+    0% {background-color: rgb(116, 114, 114);}
+    50% {background-color:rgb(255, 68, 0) ;transform: scale(1.1); color: black;}
+    100% {background-color:rgb(116, 114, 114) ; color: rgb(230, 229, 229);}
+}
+
+
+
+
+::ng-deep{
+    
+    .ngx-pagination{
+       padding-left: 0;
+       color: white;
+    }
+
+    .curren{
+        font-size: 40px;
+    }
+
+    
+    a{
+       color: rgb(9, 9, 9); 
+    }
+    span{
+        color: aliceblue;
+    }
+    
+    .ngx-pagination .disabled{
+        color: aliceblue;
+    }
+
+    .ngx-pagination .pagination-previous a,span:after,
+    .ngx-pagination .pagination-next a,span:after{
+        color: aliceblue;
+    }
+
+    .ngx-pagination .pagination-previous a,  span:after,
+    .ngx-pagination .pagination-next a,  span:after {
+        color: rgb(255, 68, 0);
+    }
+
+    .ngx-pagination li.current{
+        background: rgb(255, 68, 0);
+    }
+    
+}
+

@@ -1,0 +1,24 @@
+<div *ngIf="person && description" class="container">
+  
+    <div class="btn-container">
+        
+      <i class="bi bi-box-arrow-left" routerLink="/"></i>
+    </div>
+    
+    <div class="main">
+      <div class="top">
+        <h1>{{ person.name }}</h1>
+        <p> <b>Gender:</b> {{ person.gender }}</p>
+        <p><b>Height:</b> {{ person.height }}cm</p>
+        <p><b>Mass:</b> {{ person.mass }}kg</p>
+        <p><b>Color of Hair:</b> {{ person.hair_color }}</p>
+      </div>
+      <div class="bottom">
+        <p class="first-p"><b>Color of skin:</b> {{ person.skin_color }}</p>
+        <p><b>Color of eye:</b> {{ person.eye_color }}</p>
+        <p class="birthday"><b>Year of Birth:</b> {{ birthYear }} </p>
+        <p><b>Created:</b> {{ currentDate }}</p>
+        <p><b>Edited:</b> {{ currentDate }}</p>
+      </div>
+    </div>  
+  </div>

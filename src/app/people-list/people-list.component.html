@@ -1,0 +1,13 @@
+<div>
+    <table>
+      <tr *ngFor="let person of people | paginate: { itemsPerPage: itemsPerPage, currentPage: p }" [routerLink]="['/people', person.id]">
+        <td class="personId" >{{ person.id }}</td>
+        <td class="names" >{{ person.name }}</td>
+      </tr>
+    </table>
+  
+    <div class="pagination " >
+      <pagination-controls class=".ngx-pagination .current" (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+
